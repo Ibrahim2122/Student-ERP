@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Form view -->
+        <record id="view_student_form" model="ir.ui.view">
+            <field name="name">school.student.form</field>
+            <field name="model">school.student</field>
+            <field name="arch" type="xml">
+                <form string="Student">
+                    <sheet>
+                        <group>
+                            <field name="full_name"/>
+                            <field name="gender"/>
+                            <field name="date_of_birth"/>
+                            <field name="age" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="email"/>
+                            <field name="phone_number"/>
+                            <field name="addmission_date"/>
+                            <field name="status"/>
+                        </group>
+                        <group>
+                            <field name="address"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- List view -->
+        <record id="view_student_list" model="ir.ui.view">
+            <field name="name">school.student.list</field>
+            <field name="model">school.student</field>
+            <field name="arch" type="xml">
+                <list string="Students">
+                    <field name="full_name"/>
+                    <field name="gender"/>
+                    <field name="age"/>
+                    <field name="status"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Action (your <act_window> tag is not correct XML for Odoo data files) -->
+        <record id="student_action" model="ir.actions.act_window">
+            <field name="name">Students</field>
+            <field name="res_model">school.student</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <!-- Menus -->
+        <menuitem id="school_management_menu" name="School Management"/>
+        <menuitem id="student_menu" name="Students" parent="school_management_menu" action="student_action"/>
+
+    </data>
+</odoo>

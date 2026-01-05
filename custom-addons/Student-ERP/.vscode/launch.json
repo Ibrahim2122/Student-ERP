@@ -1,0 +1,19 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python Debugger: Current File with Arguments",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "/Users/ibrahim/Developer/odoo/odoo18/community/odoo-bin",
+      "python": "/Users/ibrahim/miniconda3/envs/env18/bin/python3",
+      "console": "integratedTerminal",
+      "args": [
+        "--config=/Users/ibrahim/Developer/odoo/odoo18/custom-addons/Student-ERP/odoo.conf"
+      ]
+    }
+  ]
+}
