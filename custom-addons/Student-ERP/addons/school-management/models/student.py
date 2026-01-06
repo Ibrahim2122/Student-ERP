@@ -12,8 +12,8 @@ class Student(models.Model):
         ('female', 'Female'),
     ], string='Gender', required=True)
     date_of_birth = fields.Date(string='Date of Birth' , required=True)
-    email = fields.Char(string='Email', required=True)
-    phone_number = fields.Char(string='Phone Number', required=True)
+    email = fields.Char(string='Email')
+    phone_number = fields.Char(string='Phone Number')
     address = fields.Text(string='Address')
     addmission_date = fields.Date(string='Admission Date', required=True)
     status = fields.Selection([
