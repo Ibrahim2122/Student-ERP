@@ -1,1 +1,1 @@
-from . import student, course
+from . import student, course, enrollment, fee

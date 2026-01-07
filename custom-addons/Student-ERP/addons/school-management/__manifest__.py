@@ -17,6 +17,8 @@ School management module to manage students, courses, and teachers.
         'security/ir.model.access.csv',
         'views/student_views.xml',
         'views/course_views.xml',
+        'views/enrollment_views.xml',
+        'views/fee_views.xml',
     ],
     'demo': [],
     'installable': True,

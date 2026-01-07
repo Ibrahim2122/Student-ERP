@@ -4,6 +4,7 @@ from datetime import date
 class Student(models.Model):
     _name = 'school.student'
     _description = 'Student'
+    _rec_name = 'full_name'
 
     # id = fields.Integer(string='ID', required=True)
     full_name = fields.Char(string='Name', required=True)

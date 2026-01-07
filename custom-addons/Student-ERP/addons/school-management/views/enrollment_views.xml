@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <record id='view_course_form' model='ir.ui.view'>
+            <field name='name'>school.enrollment.form</field>
+            <field name='model'>school.enrollment</field>
+            <field name='arch' type='xml'>
+                <form string='Enrollment'>
+                    <sheet>
+                        <group>
+                            <field name='student_id'/>
+                            <field name='course_id'/>
+                            <field name='enrollment_date'/>
+                            <field name='status'/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id='view_enrollment_list' model='ir.ui.view'>
+            <field name='name'>school.enrollment.list</field>
+            <field name='model'>school.enrollment</field>
+            <field name='arch' type='xml'>
+                <list string='Enrollments'>
+                    <field name='student_id'/>
+                    <field name='course_id'/>
+                    <field name='status'/>
+                </list>
+            </field>
+        </record>
+
+        <record id='enrollment_action' model='ir.actions.act_window'>
+            <field name='name'>Enrollments</field>
+            <field name='res_model'>school.enrollment</field>
+            <field name='view_mode'>list,form</field>
+        </record>
+
+        <menuitem id='enrollment_menu' name='Enrollments' parent='school_management_menu' action='enrollment_action'/>
+
+    </data>
+</odoo>
