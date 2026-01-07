@@ -1,0 +1,12 @@
+[
+  { "name": "Ahmed Al-Harthy", "gender": "male" },
+  { "name": "Fatima Al-Zahra", "gender": "female" },
+  { "name": "Mohammed Al-Balushi", "gender": "male" },
+  { "name": "Aisha Al-Said", "gender": "female" },
+  { "name": "Salim Al-Kindi", "gender": "male" },
+  { "name": "Noor Al-Rashdi", "gender": "female" },
+  { "name": "Yousef Al-Maqbali", "gender": "male" },
+  { "name": "Huda Al-Hinai", "gender": "female" },
+  { "name": "Khalid Al-Farsi", "gender": "male" },
+  { "name": "Maryam Al-Shukaili", "gender": "female" }
+]

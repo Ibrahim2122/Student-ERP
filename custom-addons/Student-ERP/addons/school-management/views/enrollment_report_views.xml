@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+    <!-- Pivot report -->
+    <record id="view_enrollment_pivot" model="ir.ui.view">
+      <field name="name">school.enrollment.pivot</field>
+      <field name="model">school.enrollment</field>
+      <field name="arch" type="xml">
+        <pivot string="Enrollment Report">
+          <field name="course_id" type="row"/>
+          <field name="status" type="col"/>
+          <field name="enrollment_count" type="measure"/>
+        </pivot>
+      </field>
+    </record>
+
+    <!-- Graph report -->
+    <record id="view_enrollment_graph" model="ir.ui.view">
+      <field name="name">school.enrollment.graph</field>
+      <field name="model">school.enrollment</field>
+      <field name="arch" type="xml">
+        <graph string="Enrollments by Course" type="bar">
+          <field name="course_id" type="row"/>
+          <field name="enrollment_count" type="measure"/>
+        </graph>
+      </field>
+    </record>
+
+    <!-- Action opening pivot + graph -->
+    <record id="enrollment_report_action" model="ir.actions.act_window">
+      <field name="name">Enrollment Reports</field>
+      <field name="res_model">school.enrollment</field>
+      <field name="view_mode">pivot,graph</field>
+    </record>
+
+    <!-- Menu: Reports -->
+    <menuitem id="school_reports_menu" name="Reports" parent="school_management_menu"/>
+    <menuitem id="enrollment_reports_menu" name="Enrollment Reports"
+              parent="school_reports_menu" action="enrollment_report_action"/>
+
+  </data>
+</odoo>

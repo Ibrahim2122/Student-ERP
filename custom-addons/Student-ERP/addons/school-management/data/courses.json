@@ -1,0 +1,12 @@
+[
+  { "name": "Introduction to Programming", "code": "CS101", "credits": 3 },
+  { "name": "Data Structures & Algorithms", "code": "CS201", "credits": 5 },
+  { "name": "Object-Oriented Programming", "code": "CS202", "credits": 5 },
+  { "name": "Database Systems", "code": "CS301", "credits": 3 },
+  { "name": "Operating Systems", "code": "CS302", "credits": 4 },
+  { "name": "Computer Networks", "code": "CS303", "credits": 4 },
+  { "name": "Software Engineering", "code": "CS304", "credits": 5 },
+  { "name": "Web Development", "code": "CS305", "credits": 5 },
+  { "name": "Artificial Intelligence", "code": "CS401", "credits": 3 },
+  { "name": "Machine Learning", "code": "CS402", "credits": 3 }
+]

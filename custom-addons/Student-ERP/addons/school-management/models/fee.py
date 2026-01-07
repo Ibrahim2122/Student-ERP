@@ -5,7 +5,7 @@ class Fee(models.Model):
     _name = 'school.fee'
     _description = 'Fee Structure'
 
-    student_id = fields.Many2one('school.student', string='Student', required=True)
+    student_id = fields.Many2one('school.student', string='Student', required=True, ondelete='cascade')
     amount = fields.Float(string='Amount', required=True)
     amount_display = fields.Char(compute="_compute_amount_display")
     fee_type = fields.Selection([
@@ -19,8 +19,12 @@ class Fee(models.Model):
     status = fields.Selection([
         ('pending', 'Pending'),
         ('paid', 'Paid'),
-        ('overdue', 'Overdue'),
     ], string='Status', default='pending', required=True)
+    paid_state = fields.Selection([
+        ('paid', 'Paid'),
+        ('unpaid', 'Unpaid'),
+], string='Paid State', compute='_compute_paid_state', store=True)
+
     notes = fields.Text(string='Notes')
 
 
@@ -46,3 +50,8 @@ class Fee(models.Model):
     def _compute_amount_display(self):
         for rec in self:
             rec.amount_display = f"{rec.amount:,.2f} $"
+
+    @api.depends('status')
+    def _compute_paid_state(self):
+        for rec in self:
+            rec.paid_state = 'paid' if rec.status == 'paid' else 'unpaid'

@@ -5,8 +5,9 @@ class Enrollment(models.Model):
     _name = 'school.enrollment'
     _description = 'Enrollment'
 
-    student_id = fields.Many2one('school.student', string='Student', required=True)
-    course_id = fields.Many2one('school.course', string='Course', required=True)
+    student_id = fields.Many2one('school.student', string='Student', required=True, ondelete='cascade')
+    course_id = fields.Many2one('school.course', string='Course', required=True, ondelete='cascade')
+    enrollment_count = fields.Integer(string="Enrollments", default=1)
     enrollment_date = fields.Date(string='Enrollment Date')
     status = fields.Selection([
         ('enrolled', 'Enrolled'),
