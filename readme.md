@@ -106,6 +106,7 @@ school-management/
 ├── security/
 ├── data/
 ├── __manifest__.py
+```
 
 
 ## ▶️ How to Run
@@ -122,3 +123,4 @@ school-management/
 ## 📄 License
 
 This project is developed **for academic purposes only** using **Odoo Community Edition**, which is licensed under **LGPL-3**.
+
