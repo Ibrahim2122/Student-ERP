@@ -1,15 +1,15 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_school_student_user,access.school.student.user,model_school_student,group_school_student_user,1,1,1,0
-access_school_student_admin,access.school.student.admin,model_school_student,group_school_student_admin,1,1,1,1
+access_school_student_user,access.school.student.user,model_school_student,group_school_user,1,1,1,0
+access_school_student_admin,access.school.student.admin,model_school_student,group_school_admin,1,1,1,1
 
-access_school_course_user,access.school.course.user,model_school_course,group_school_student_user,1,1,1,0
-access_school_course_admin,access.school.course.admin,model_school_course,group_school_student_admin,1,1,1,1
+access_school_course_user,access.school.course.user,model_school_course,group_school_user,1,1,1,0
+access_school_course_admin,access.school.course.admin,model_school_course,group_school_admin,1,1,1,1
 
-access_school_enrollment_user,access.school.enrollment.user,model_school_enrollment,group_school_student_user,1,1,1,0
-access_school_enrollment_admin,access.school.enrollment.admin,model_school_enrollment,group_school_student_admin,1,1,1,1
+access_school_enrollment_user,access.school.enrollment.user,model_school_enrollment,group_school_user,1,1,1,0
+access_school_enrollment_admin,access.school.enrollment.admin,model_school_enrollment,group_school_admin,1,1,1,1
 
-access_school_fee_user,access.school.fee.user,model_school_fee,group_school_student_user,1,1,1,0
-access_school_fee_admin,access.school.fee.admin,model_school_fee,group_school_student_admin,1,1,1,1
+access_school_fee_user,access.school.fee.user,model_school_fee,group_school_user,1,1,1,0
+access_school_fee_admin,access.school.fee.admin,model_school_fee,group_school_admin,1,1,1,1
 
-access_school_dummy_generator_user,access.school.dummy.generator.user,model_school_dummy_generator,group_school_student_user,1,1,1,0
-access_school_dummy_generator_admin,access.school.dummy.generator.admin,model_school_dummy_generator,group_school_student_admin,1,1,1,1
+access_school_dummy_generator_user,access.school.dummy.generator.user,model_school_dummy_generator,group_school_user,1,1,1,0
+access_school_dummy_generator_admin,access.school.dummy.generator.admin,model_school_dummy_generator,group_school_admin,1,1,1,1
